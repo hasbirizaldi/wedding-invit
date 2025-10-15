@@ -68,9 +68,9 @@ const ListAdmin = () => {
               <th className="px-4 py-2 text-left text-sm font-semibold border-b">#</th>
               <th className="px-4 py-2 text-left text-sm font-semibold border-b">Nama Undangan</th>
               <th className=" px-4 py-2 text-left text-sm font-semibold border-b">Tanggal Akad</th>
-              <th className=" px-4 py-2 text-left text-sm font-semibold border-b lg:block hidden">Email</th>
-              <th className=" px-4 py-2 text-left text-sm font-semibold border-b lg:block hidden">Tanggal Dibuat</th>
-              <th className="px-4 py-2 text-left text-sm font-semibold border-b lg:block hidden">No Tlp</th>
+              <th className=" px-4 py-2 text-left text-sm font-semibold border-b lg:table-cell hidden">Email</th>
+              <th className=" px-4 py-2 text-left text-sm font-semibold border-b lg:table-cell hidden">Tanggal Dibuat</th>
+              <th className="px-4 py-2 text-left text-sm font-semibold border-b lg:table-cell hidden">No Tlp</th>
 
               <th className="px-4 py-2 text-center text-sm font-semibold border-b ">Action</th>
             </tr>
@@ -110,11 +110,11 @@ const ListAdmin = () => {
                     {wedd.nickname_mp?.split(" ")[0]} & {wedd.nickname_mw?.split(" ")[0]}
                   </td>
                   <td className="px-4 py-2 border-b">{formatDate2(wedd.date_akad)}</td>
-                  <td className="px-4 py-2 border-b lg:block hidden">{wedd.user.email}</td>
-                  <td className="px-4 py-2 border-b lg:block hidden">{formatDate2(wedd.created_at)}</td>
+                  <td className="px-4 py-2 border-b lg:table-cell hidden">{wedd.user.email}</td>
+                  <td className="px-4 py-2 border-b lg:table-cell hidden">{formatDate2(wedd.created_at)}</td>
 
-                  <td className="px-4 py-2 border-b lg:block hidden">{wedd.no_tlp}</td>
-                  <td className="sm:h-16 flex flex-row gap-3 justify-center px-4 py-2 border-b">
+                  <td className="px-4 py-2 border-b lg:table-cell hidden">{wedd.no_tlp}</td>
+                  <td className=" flex flex-row gap-3 justify-center px-4 py-2 border-b">
                     <Link to={`/${wedd.slug}?to=Raden Mas Gareng`} target="_blank" className="px-2 py-1 text-lg bg-pink-400 text-white rounded hover:bg-pink-500">
                       <FaPlayCircle />
                     </Link>
