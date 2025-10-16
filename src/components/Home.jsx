@@ -53,12 +53,12 @@ const Home = ({ data }) => {
           <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.1 }} viewport={{ once: false, amount: 0.3 }} className="font-semibold">
             <p className="text-center lg:text-xl md:text-xl text-base text-rose-950 font-one">
               {data
-                ? formatDate(data.date_wedding, {
+                ? formatDate(data.date_akad, {
                     day: "2-digit",
                     month: "long",
                     year: "numeric",
                   })
-                : "20 Oktober 2026"}
+                : "31 Desember 2026"}
             </p>
           </motion.div>
           <motion.div initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }} viewport={{ once: false, amount: 0.3 }} className="mx-auto">

@@ -29,7 +29,7 @@ const AkadReception = ({ data }) => {
                     ? safeDate(data.date_akad).toLocaleDateString("id-ID", {
                         day: "2-digit",
                       })
-                    : "20"}
+                    : "31"}
                 </motion.p>
                 <motion.p initial={{ rotateY: 90 }} whileInView={{ rotateY: 0 }} transition={{ duration: 1, delay: 0.7 }} viewport={{ once: false, amount: 0.3 }} className="lg:text-4xl text-2xl font-one">
                   {data
@@ -45,7 +45,7 @@ const AkadReception = ({ data }) => {
                     ? safeDate(data.date_akad).toLocaleDateString("id-ID", {
                         month: "short",
                       })
-                    : "Okt"}
+                    : "Des"}
                 </motion.p>
               </div>
             </div>
@@ -76,20 +76,20 @@ const AkadReception = ({ data }) => {
             <div className="grid grid-cols-3 font-playfair text-rose-950 mb-5 lg:mx-14 md:mx-14">
               <div className="flex justify-center items-center font-one font-extrabold">
                 <motion.p initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.9 }} viewport={{ once: false, amount: 0.3 }} className="text-xl lg:text-2xl md:text-2xl">
-                  {data ? safeDate(data.date_akad).toLocaleDateString("id-ID", { weekday: "long" }).toUpperCase() : "Minggu"}
+                  {data ? safeDate(data.date_resepsi).toLocaleDateString("id-ID", { weekday: "long" }).toUpperCase() : "Minggu"}
                 </motion.p>
               </div>
               <div className="flex flex-col justify-center items-center font-one font-extrabold">
                 <motion.p initial={{ rotateY: 90 }} whileInView={{ rotateY: 0 }} transition={{ duration: 1, delay: 0.9 }} viewport={{ once: false, amount: 0.3 }} className="lg:text-7xl md:text-6xl text-5xl ">
                   {data
-                    ? safeDate(data.date_akad).toLocaleDateString("id-ID", {
+                    ? safeDate(data.date_resepsi).toLocaleDateString("id-ID", {
                         day: "2-digit",
                       })
-                    : "20"}
+                    : "31"}
                 </motion.p>
                 <motion.p initial={{ rotateY: 90 }} whileInView={{ rotateY: 0 }} transition={{ duration: 1, delay: 0.7 }} viewport={{ once: false, amount: 0.3 }} className="lg:text-4xl text-2xl">
                   {data
-                    ? safeDate(data.date_akad).toLocaleDateString("id-ID", {
+                    ? safeDate(data.date_resepsi).toLocaleDateString("id-ID", {
                         year: "numeric",
                       })
                     : "2026"}
@@ -98,10 +98,10 @@ const AkadReception = ({ data }) => {
               <div className="flex justify-center items-center font-one font-extrabold">
                 <motion.p initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.9 }} viewport={{ once: false, amount: 0.3 }} className="text-2xl lg:text-3xl md:text-3xl">
                   {data
-                    ? safeDate(data.date_akad).toLocaleDateString("id-ID", {
+                    ? safeDate(data.date_resepsi).toLocaleDateString("id-ID", {
                         month: "short",
                       })
-                    : "Okt"}
+                    : "Des"}
                 </motion.p>
               </div>
             </div>
@@ -111,7 +111,7 @@ const AkadReception = ({ data }) => {
                 Pukul
                 <span className="mx-1">
                   {data
-                    ? safeDate(data.date_akad).toLocaleTimeString("id-ID", {
+                    ? safeDate(data.date_resepsi).toLocaleTimeString("id-ID", {
                         hour: "2-digit",
                         minute: "2-digit",
                       })

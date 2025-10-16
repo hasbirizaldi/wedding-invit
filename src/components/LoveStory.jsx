@@ -56,7 +56,7 @@ const LoveStory = ({ data }) => {
             className="bg-rose-900/10 w-[94%] shadow-ku rounded-bl-3xl rounded-tr-3xl px-4 py-2"
           >
             <p className="text-right font-one lg:text-2xl md:text-xl text-lg text-rose-950 font-semibold">The Wedding</p>
-            <p className="text-right font-semibold text-gray-800 lg:text-lg md:text-base text-sm">{data?.date_wedding ? formatDate2(data.date_wedding) : "20 Oktober 2025"}</p>
+            <p className="text-right font-semibold text-gray-800 lg:text-lg md:text-base text-sm">{data?.date_akad ? formatDate2(data.date_akad) : "31 Desember 2026"}</p>
             <p className="lg:text-xl md:text-lg">{data?.story_wedding ? data.story_wedding : "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque explicabo optio tempore nemo, repellendus maxime? Cumque."}</p>
           </motion.div>
         </div>

@@ -16,6 +16,7 @@ const Cover = ({ openInvitation, data }) => {
       setGuestName(formattedName);
     }
   }, []);
+  console.log(data?.date_akad);
   return (
     <>
       <section id="cover" className="h-[100vh]  flex justify-center items-center ">
@@ -36,19 +37,19 @@ const Cover = ({ openInvitation, data }) => {
           </div>
           <div className="w-full flex flex-col justify-center  mt-4">
             <div className="font-normal lg:text-2xl md:text-2xl text-lg text-amber-950">
-              <p className="text-center font-one">{data ? formatDate(data.date_wedding, { weekday: "long" }).toUpperCase() : "Minggu"}</p>
+              <p className="text-center font-one">{data ? formatDate(data.date_akad, { weekday: "long" }).toUpperCase() : "Minggu"}</p>
               <p className="text-center font-one -mt-1">
                 {data
-                  ? formatDate(data.date_wedding, {
+                  ? formatDate(data.date_akad, {
                       day: "2-digit",
                       month: "long",
                       year: "numeric",
                     })
-                  : "20 Oktober 2026"}
+                  : "31 Desember 2026"}
               </p>
             </div>
             <div className="mx-auto lg:mt-2  md:mt-2 mt-1">
-              <CountdownTimer targetDate={data ? data.date_akad : "2026-10-20"} />
+              <CountdownTimer targetDate={data?.date_akad ? data.date_akad : "2026-12-30T23:23:00.000000Z"} />
             </div>
             <div className="mt-2 lg:text-xl md:text-xl text-base font-noto mb-6">
               <p className="text-center">Kepada Yth.</p>
